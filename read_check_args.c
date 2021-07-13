@@ -6,7 +6,7 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 10:43:58 by mlachheb          #+#    #+#             */
-/*   Updated: 2021/07/12 14:50:39 by mlachheb         ###   ########.fr       */
+/*   Updated: 2021/07/13 17:02:40 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,16 @@ int	check_argv(char **args)
 		}
 		i++;
 	}
+	return (0);
+}
+
+int	check_value(t_common_data data, int number_philos)
+{
+	if (number_philos <= 0)
+		fatal(BAD_ARG);
+	else if (data.time_to_die <= 0 || data.time_to_eat <= 0
+		|| data.time_to_sleep <= 0 || data.must_eat_number <= 0)
+		fatal(BAD_ARG);
 	return (0);
 }
 

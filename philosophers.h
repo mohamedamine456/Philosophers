@@ -6,7 +6,7 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 12:54:04 by mlachheb          #+#    #+#             */
-/*   Updated: 2021/07/12 20:45:49 by mlachheb         ###   ########.fr       */
+/*   Updated: 2021/07/13 16:59:33 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void						fatal_arguments(void);
 
 t_common_data				read_data(char **argv, int *number_philos);
 int							check_argv(char **args);
+int							check_value(t_common_data data, int number_philos);
 void						print_data(t_common_data data);
 void						print_philosophers(t_philosopher *philos);
 
