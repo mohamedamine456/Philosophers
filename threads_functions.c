@@ -6,7 +6,7 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 15:55:43 by mlachheb          #+#    #+#             */
-/*   Updated: 2021/07/14 14:36:43 by mlachheb         ###   ########.fr       */
+/*   Updated: 2021/07/14 20:00:39 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ void	detach_philosophers(t_philosopher *philos)
 	tmp = philos;
 	while (tmp != NULL)
 	{
-		pthread_mutex_destroy(tmp->write_mutex);
 		pthread_detach(tmp->philo_thread);
 		tmp = tmp->next;
 	}
