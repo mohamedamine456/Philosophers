@@ -6,7 +6,7 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 10:43:58 by mlachheb          #+#    #+#             */
-/*   Updated: 2021/07/13 17:02:40 by mlachheb         ###   ########.fr       */
+/*   Updated: 2021/07/14 15:34:43 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ t_common_data	read_data(char **argv, int *number_philos)
 	data.time_to_sleep = ft_atoi(argv[3]);
 	data.must_eat_number = -1;
 	if (argv[4] != NULL)
+	{
 		data.must_eat_number = ft_atoi(argv[4]);
+		if (data.must_eat_number == 0)
+			fatal(BAD_ARG);
+	}
 	return (data);
 }
 
@@ -51,7 +55,7 @@ int	check_value(t_common_data data, int number_philos)
 	if (number_philos <= 0)
 		fatal(BAD_ARG);
 	else if (data.time_to_die <= 0 || data.time_to_eat <= 0
-		|| data.time_to_sleep <= 0 || data.must_eat_number <= 0)
+		|| data.time_to_sleep <= 0)
 		fatal(BAD_ARG);
 	return (0);
 }
