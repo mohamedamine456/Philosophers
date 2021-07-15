@@ -6,14 +6,14 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 12:54:04 by mlachheb          #+#    #+#             */
-/*   Updated: 2021/07/13 16:59:33 by mlachheb         ###   ########.fr       */
+/*   Updated: 2021/07/15 12:11:47 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
-# define ERROR_MSG "ERROR:\n"
-# define ERROR_ARGS_MSG1 "./philosophers number_of_philosophers"
+# define ERROR_MSG "USAGE:\n"
+# define ERROR_ARGS_MSG1 "\t./philo number_of_philosophers"
 # define ERROR_ARGS_MSG2 " time_to_die time_to_eat time_to_sleep"
 # define ERROR_ARGS_MSG3 " [number_of_times_each_philosopher_must_eat]"
 # define BAD_ARG "All arguments must be positif integers.(no positif sign)!"
