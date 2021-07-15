@@ -6,7 +6,7 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 16:05:38 by mlachheb          #+#    #+#             */
-/*   Updated: 2021/07/12 14:46:33 by mlachheb         ###   ########.fr       */
+/*   Updated: 2021/07/15 17:03:04 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_usleep(long long time_to_sleep)
 		end = get_day_time_us();
 		if (end - begin >= time_to_sleep)
 			break ;
-		if (end - begin > 10)
-			usleep(8);
+		if (end - begin > 100)
+			usleep(80);
 	}
 }
