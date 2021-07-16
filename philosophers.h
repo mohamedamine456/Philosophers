@@ -6,7 +6,7 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 12:54:04 by mlachheb          #+#    #+#             */
-/*   Updated: 2021/07/15 12:11:47 by mlachheb         ###   ########.fr       */
+/*   Updated: 2021/07/16 12:17:15 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@
 # define TK_FORK "has taken a fork"
 # define TRUE 1
 # define FALSE 0
+# define EATS 1
+# define SLEEPS 2
+# define THINKS 3
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -43,6 +46,7 @@ typedef struct s_common_data
 typedef struct s_philosopher
 {
 	int						id;
+	int						status;
 	t_common_data			data;
 	long long				last_meal_time;
 	long long				number_meals;
@@ -104,8 +108,6 @@ t_philosopher				*last_philosopher(t_philosopher *philos);
 
 void						print_philosopher_action(t_philosopher *philo,
 								long long real_time, char *action);
-void						all_ate(pthread_mutex_t *write_mutex,
-								long long must_eat_number);
 void						philo_died(pthread_mutex_t *write_mutex, int id,
 								long long real_time);
 
@@ -139,6 +141,7 @@ void						philosopher_thinks(t_philosopher *philosopher);
  */
 
 void						*supervisor_life(void *supervisor);
+int							check_death_time(t_philosopher *philosophers);
 int							check_must_eat_number(t_philosopher *philosophers);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 15:55:43 by mlachheb          #+#    #+#             */
-/*   Updated: 2021/07/14 20:00:39 by mlachheb         ###   ########.fr       */
+/*   Updated: 2021/07/16 12:03:13 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	create_philosopher_thread(t_philosopher *philo)
 {
-	usleep(50);
+	usleep(100);
 	if (pthread_create(&(philo->philo_thread), NULL,
 			philosopher_life, philo) != 0)
 		fatal("create philosophers thread failed!");
