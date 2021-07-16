@@ -6,7 +6,7 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 12:54:04 by mlachheb          #+#    #+#             */
-/*   Updated: 2021/07/16 12:17:15 by mlachheb         ###   ########.fr       */
+/*   Updated: 2021/07/16 14:51:56 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # define ERROR_ARGS_MSG1 "\t./philo number_of_philosophers"
 # define ERROR_ARGS_MSG2 " time_to_die time_to_eat time_to_sleep"
 # define ERROR_ARGS_MSG3 " [number_of_times_each_philosopher_must_eat]"
-# define BAD_ARG "All arguments must be positif integers.(no positif sign)!"
+# define BAD_ARG "\tAll arguments must be positif integers.(no positif sign)!"
 # define SLEEPING "is sleeping"
 # define EATING "is eating"
 # define THINKING "is thinking"
